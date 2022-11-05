@@ -8,7 +8,7 @@ void even_Num(ll x,ll y)
     else
     {
         if(x%2==0)cout<<x<<" ";
-        even_Num(x+1,y);
+        even_Num(x+2,y);
     }
 }
 
@@ -17,8 +17,10 @@ int main()
 {
     int x,y;
     cin>>x>>y;
+    if(x%2!=0)x++;
     even_Num(x,y);
     return 0;
 }
+
 
 

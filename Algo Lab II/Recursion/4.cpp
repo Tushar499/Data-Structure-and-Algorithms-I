@@ -6,11 +6,10 @@ using namespace std;
 bool palindrome(int i,string s,int n)
 {
     if(i>=n/2)
-    return true;
+        return true;
     if(s[i]!=s[n-1-i])
-    return false;
+        return false;
     return palindrome(i+1,s,n);
-
 
 }
 
