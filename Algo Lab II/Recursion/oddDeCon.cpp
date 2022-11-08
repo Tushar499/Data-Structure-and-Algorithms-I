@@ -1,24 +1,24 @@
 #include<iostream>
 using namespace std;
 
-bool is_good(int n)
+bool is_Odd(int n)
 {
-    if (n%11==0) return true;
+    if (n%2!=0) return true;
     else return false;
 }
 
-int sum_of_good( int arr[], int i, int j )
+int sumOfOdds( int arr[], int i, int j )
 {
     if (i==j)
     {
-        if (is_good(arr[i])) return arr[i];
+        if (is_Odd(arr[i])) return arr[i];
         else return 0;
     }
     else
     {
         int mid = (i+j)/2;
-        int x = sum_of_good(arr, i, mid);
-        int y = sum_of_good(arr, mid+1, j);
+        int x = sumOfOdds(arr, i, mid);
+        int y = sumOfOdds(arr, mid+1, j);
         return x+y;
     }
 }
@@ -32,6 +32,7 @@ int main()
     {
         cin >> arr[i];
     }
-    cout << sum_of_good(arr, 0, n-1);
+    cout<< sumOfOdds(arr, 0, n-1);
 }
+
 
